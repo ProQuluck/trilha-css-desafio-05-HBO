@@ -1,0 +1,220 @@
+@import url("global.css");
+
+header{
+    margin-top: 130px;
+    background: linear-gradient(-45deg,#56125b,#0f0f10,#271e6e);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite alternate;
+    padding-bottom: 150px;    
+}
+.header-content{
+   padding: 0 40px;
+   padding-top: 100px;
+   
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.header-brands{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    gap: 30px;
+}
+.header-brands img{
+    height: 58px;
+}
+.last-brands{
+    max-width: 90px;
+}
+.header-brands :last-child{
+    max-width: 73px;
+    max-height: 50px;
+}
+.header-titles{
+    margin-top: 40px;
+}
+.header-titles h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2rem;
+}
+.header-titles span{
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+.divider{
+    width: 217px;
+    height: 5px;
+    background: var(--divider-bg-color);
+    margin: 40px;
+}
+.header-pay{
+    text-align: center;
+}
+.header-pay p{
+    font-family: var(--secondary-font);
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.header-pay strong{
+    font-size: 2.5rem;
+}
+.header-pay span{
+    font-size: 1rem;
+}
+.button-animation{
+    animation-name: wiggle;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation: wiggle 2.2s linear infinite; */
+}
+.header-pay :last-child{
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+header::after{
+    content: "";
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(transparent,var(--primary-color));
+    position: absolute;
+}
+main{
+    margin-top: 150px;
+}
+.section1{
+    text-align: center;
+    padding: 24px;
+}
+.section-title{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.card{
+    background: var(--card-bg-color);
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+.card1 button{
+    margin-top: 120px;
+}
+.header-card span{
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: 900;
+}
+.header-card h3{
+    font-size: 1.5rem;
+}
+
+.card-list{
+    list-style: none;
+    text-align: left;
+}
+.card-list li{
+    margin-bottom: 14px;
+    padding-left: 14px;
+}
+.card-list li::marker{
+    content: "+";
+    font-size: 2rem;
+}
+.galery-content{
+    display: grid;
+    grid-template-columns: repeat(6, 100%);
+    grid-auto-flow: column;
+    overflow: auto hidden;
+    gap: 30px;
+    margin: 20px;
+}
+.card-poster{
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid transparent;
+}
+.card-poster1{
+    background-image: url(../images/hbo-hover_0.webp);
+}
+.card-poster2{
+    background-image: url(../images/MAX-Hover.webp);
+}
+.card-poster3{
+    background-image: url(../images/DC-Hover.webp);
+}
+.card-poster4{
+    background-image: url(../images/WB-Hover.webp);
+}
+.card-poster5{
+    background-image: url(../images/CN-Hover.png);
+}
+.card-poster6{
+    background-image: url(../images/UCL-Hover.webp);
+}
+.card-poster img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 2s;
+}
+.card-poster img:hover{
+    opacity: 0;
+}
+
+
+
+
+
+
+
+/* Background Animation */
+
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+/* Wiggle Button */
+
+@keyframes wiggle{
+    0%{
+        transform: rotate(0);
+    }
+    15%{
+        transform: rotate(-15deg);
+    }
+    20%{
+        transform: rotate(10deg);
+    }
+    25%{
+        transform: rotate(-10deg);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+    35%{
+        transform: rotate(-10deg);
+    }
+    40%,100%{
+        transform: rotate(0);
+    }
+}

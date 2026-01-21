@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+  :root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(
+      45deg,
+      #9b34ef 0%,
+      #490cb0 20%,
+      transparent 50%
+    );
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(
+      90deg,
+      #5516ba,
+      rgba(255, 0, 229, 0.5) 80%
+    );
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+    --primary-font: "Raleway",sans-serif;
+    --secondary-font: "Quicksand",arial;
+
+    scroll-behavior: smooth;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+    color:var(--text-color);
+  }
+  body{
+    background-color: var(--primary-color);
+  }
+  a{
+    text-decoration: none;
+  }
+
+  nav{
+    height: 130px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 24px;
+    gap: 20px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: var(--nav-bg-color);
+  }
+  nav .logo{
+    width: 100px;
+
+  }
+  nav .nav-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  .button{
+    background-color: var(--tertiary-color);
+    padding: 16px 40px;
+    border: none;
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+  }
+  .button-gradient{
+    background: var(--btn-bg-color-gradient);
+    background-size: 240%;
+    outline: 2px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+  }
+  .button-gradient:hover{
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px; /*remover*/
+    gap: 16px; /*altera*/
+  }
+  .footer-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  .footer-link a{
+    color: var(--link-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+  }
+  footer p{
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 16px; 
+    color: var(--link-color);
+  }
+  .footer-logos{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+
+  /* Custom Scroll */
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+  }
