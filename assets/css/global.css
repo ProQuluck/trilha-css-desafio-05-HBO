@@ -85,6 +85,12 @@
     border-radius: 50px;
     font-size: 0.9rem;
   }
+  .nav-buttons button{
+    padding: 8px 26px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
   .button-gradient{
     background: var(--btn-bg-color-gradient);
     background-size: 240%;

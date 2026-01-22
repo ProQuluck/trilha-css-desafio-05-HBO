@@ -136,15 +136,9 @@ main{
     grid-template-columns: repeat(6, 100%);
     grid-auto-flow: column;
     overflow: auto hidden;
-    gap: 30px;
-    margin: 20px;
-}
-.card-poster{
-    border-radius: 10px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border: 2px solid transparent;
+    gap: 40px;
+    margin: 30px;
+    padding-bottom: 4px;
 }
 .card-poster1{
     background-image: url(../images/hbo-hover_0.webp);
@@ -164,6 +158,13 @@ main{
 .card-poster6{
     background-image: url(../images/UCL-Hover.webp);
 }
+.card-poster{
+    /* border-radius: 10px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid transparent;
+}
 .card-poster img{
     width: 100%;
     object-fit: cover;
@@ -173,11 +174,6 @@ main{
 .card-poster img:hover{
     opacity: 0;
 }
-
-
-
-
-
 
 
 /* Background Animation */
