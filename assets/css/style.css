@@ -239,6 +239,17 @@ main {
     .card{
         padding: 60px;
         padding-top: 40px;
+        max-width: 600px;
+        margin: 0 auto 20px;
+    }
+}
+@media screen and (min-width:801px){
+     .galery-content{
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-flow: row;
+        overflow: auto;
+        margin: 24px;
+        gap: 32px;
     }
 }
 
