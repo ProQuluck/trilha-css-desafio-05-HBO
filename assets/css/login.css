@@ -18,7 +18,7 @@ main{
     margin: 10px 0 40px;
 }
 .main-content p{
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
 }
 .form{
@@ -27,6 +27,7 @@ main{
     justify-content: center;
     align-items: center;
     gap: 20px;
+    width: 80vw;
 }
 .form input{
     border-radius: 8px;
@@ -49,4 +50,20 @@ main{
 .login-button a{
     color: var(--link-color);
     font-weight: 600;
+}
+@media screen and (min-width:481px){
+    body{
+    background-image: url("../images/background-movies-series.png");
+    background-size: cover;
+    background-position: left;
+    }
+    .login-button{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+@media screen and (min-width:841px){
+    .form{
+        max-width: 800px;
+    }
 }

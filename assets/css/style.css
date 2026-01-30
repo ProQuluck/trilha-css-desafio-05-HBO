@@ -57,7 +57,9 @@ header {
 }
 
 .divider {
-    width: 217px;
+    width: 60vw;
+    min-width: 217px;
+    max-width: 700px;
     height: 5px;
     background: var(--divider-bg-color);
     margin: 40px;
@@ -114,8 +116,9 @@ main {
 .section-title {
     font-size: 2rem;
     font-weight: 500;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
     text-align: center;
+    max-width: 1152px;
 }
 
 .card {
@@ -145,6 +148,7 @@ main {
 .card-list {
     list-style: none;
     text-align: left;
+    margin-bottom: 20px;
 }
 
 .card-list li {
@@ -254,6 +258,11 @@ main {
     header {
         margin-top: 55px;
     }
+    .header-card{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
     .card{
         padding: 60px;
         padding-top: 40px;
@@ -265,6 +274,15 @@ main {
 @media screen and (min-width:1141px){
     .section1{
         margin: 0 auto;
+        background-image: url("../images/background-movies-series.png");
+        background-size: cover;
+        background-position: -100px, center;
+    }
+    .galery-content{
+        max-width: 1141px;
+        margin: 0 auto;
+        gap: 60px;
+        padding: 20px;
     }
     .header-card{
         display: flex;
@@ -290,11 +308,20 @@ main {
         max-width: 600px;
         margin: 0 40px 20px;
     }
-    .cards:hover > :not(:hover){
-        transform: perspective(4000px) rotateY(45deg);
+    .cards:has(.card:hover) .card:not(:hover,.card1){
+        transform: perspective(4000px) rotateY(-400deg);
+        transition: 3s;
     }
-    .cards .card:hover .card{
-        transform: perspective(4000px) rotateY(-45deg);
+    .cards:has(.card:hover) .card:not(:hover,.card2){
+        transform: perspective(4000px) rotateY(400deg);
+        transition: 3s;
+    }
+    .card-poster:hover{
+        transform: scale(1.05);
+    }
+    .card-poster{
+        transition: transform 1s ease-out;
+        max-width: 335px;
     }
 }
 
